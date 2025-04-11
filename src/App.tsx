@@ -6,6 +6,8 @@ import Initial from './pages/Initial'
 import Main from './pages/Main'
 import Register from './pages/Register'
 
+import { GlobalStyle, Container } from './styles'
+
 const routers = createBrowserRouter([
   {
     path: '/login',
@@ -24,7 +26,10 @@ const routers = createBrowserRouter([
 function App() {
   return (
     <Provider store={store}>
-      <RouterProvider router={routers} />
+      <GlobalStyle />
+      <Container>
+        <RouterProvider router={routers} />
+      </Container>
     </Provider>
   )
 }
