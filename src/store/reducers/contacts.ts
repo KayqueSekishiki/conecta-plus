@@ -15,8 +15,7 @@ const initialState: ContactsState = {
       title: 'Game and Front-End Developer',
       email: 'email_kayque@email.com',
       phone: 71912345678,
-      group: enums.Group.FAMILY,
-      favorite: enums.Favorite.FAVORITED
+      group: enums.Group.FAMILY
     },
     {
       id: 2,
@@ -24,8 +23,7 @@ const initialState: ContactsState = {
       title: 'UI and Pixel Designer',
       email: 'email_pedro@email.com',
       phone: 71912345678,
-      group: enums.Group.BUSINESS,
-      favorite: enums.Favorite.UNFAVORITE
+      group: enums.Group.BUSINESS
     },
     {
       id: 3,
@@ -33,8 +31,7 @@ const initialState: ContactsState = {
       title: 'Designer',
       email: 'email_nathan@email.com',
       phone: 71912345678,
-      group: enums.Group.FRIENDS,
-      favorite: enums.Favorite.FAVORITED
+      group: enums.Group.FRIENDS
     },
     {
       id: 4,
@@ -42,8 +39,7 @@ const initialState: ContactsState = {
       title: 'RH da Empresa X',
       email: 'email_empresax@email.com',
       phone: 71912345678,
-      group: enums.Group.BUSINESS,
-      favorite: enums.Favorite.UNFAVORITE
+      group: enums.Group.BUSINESS
     }
   ]
 }
