@@ -4,7 +4,7 @@ import FilterCard from '../../components/FilterCard'
 import { RootReducer } from '../../store'
 
 import * as S from './styles'
-import { Button, Field } from '../../styles'
+import { Button, Field, SaveButton } from '../../styles'
 import * as enums from '../../utils/enums/Contact'
 import { changeLetterSearch } from '../../store/reducers/filter'
 
@@ -49,12 +49,15 @@ const LeftAside = ({ showFilter }: Props) => {
                 cation="Business"
               />
               <FilterCard
-                value={enums.Group.FAVORITES}
+                value={enums.Favorite.FAVORITED}
                 criterion="favorites"
                 cation="Favorites"
               />
 
               <FilterCard criterion="all" cation="All Contacts" />
+              <SaveButton onClick={() => navigate('/register')}>
+                ADD NEW CONTACT
+              </SaveButton>
               <Button onClick={() => navigate('/login')}>DISCONECT</Button>
             </S.Filters>
           </>

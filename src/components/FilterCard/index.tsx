@@ -7,7 +7,7 @@ import { RootReducer } from '../../store'
 export type Props = {
   cation: string
   criterion: 'family' | 'friends' | 'business' | 'favorites' | 'all'
-  value?: enums.Group
+  value?: enums.Group | enums.Favorite
 }
 
 const FilterCard = ({ cation, criterion, value }: Props) => {
@@ -44,7 +44,7 @@ const FilterCard = ({ cation, criterion, value }: Props) => {
   const active = verifyActive()
 
   return (
-    <S.Card ativo={active} onClick={filtrate}>
+    <S.Card isActive={active} onClick={filtrate}>
       <S.Counter>{count}</S.Counter>
       <S.Label>{cation}</S.Label>
     </S.Card>

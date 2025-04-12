@@ -4,7 +4,7 @@ import * as enums from '../../utils/enums/Contact'
 type FilterState = {
   letterSearch?: string
   criterion: 'family' | 'friends' | 'business' | 'favorites' | 'all'
-  value?: enums.Group
+  value?: enums.Group | enums.Favorite
 }
 
 const initialState: FilterState = {

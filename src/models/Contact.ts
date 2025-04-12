@@ -7,6 +7,7 @@ class Tarefa {
   email: string
   phone: number
   group: enums.Group
+  favorite: enums.Favorite
 
   constructor(
     id: number,
@@ -14,7 +15,8 @@ class Tarefa {
     title: string,
     email: string,
     phone: number,
-    group: enums.Group
+    group: enums.Group,
+    favorite: enums.Favorite
   ) {
     this.id = id
     this.name = name
@@ -22,6 +24,7 @@ class Tarefa {
     this.email = email
     this.phone = phone
     this.group = group
+    this.favorite = favorite
   }
 }
 

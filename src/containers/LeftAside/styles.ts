@@ -23,8 +23,8 @@ export const Filters = styled.div`
   margin-top: 16px;
 
   Button {
-    margin-top: 16px;
+    margin-top: 160px;
+    margin-bottom: -152px;
     height: 40px;
-
- 
+  }
 `

@@ -38,6 +38,8 @@ export const Field = styled.input`
   width: 100%;
 `
 export const Button = styled.button`
+  min-width: 80px;
+  min-height: 32px;
   font-size: 12px;
   font-weight: bold;
   color: #fff;
@@ -60,6 +62,17 @@ export const Button = styled.button`
   }
 `
 
-export const BotaoSalvar = styled(Button)`
+export const SaveButton = styled(Button)`
   background-color: ${variaveis.verde};
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid ${variaveis.verde};
+    color: ${variaveis.verde};
+  }
+
+  &:active {
+    background-color: ${variaveis.verde};
+    color: #fff;
+  }
 `
