@@ -22,12 +22,12 @@ const FilterCard = ({ cation, criterion, value }: Props) => {
   }
 
   const countContacts = () => {
-    if (criterion !== 'all') {
-      return contacts.itens.filter((item) => item.group === value).length
-    }
-
-    if (criterion === 'all') {
+    if (criterion === 'favorites') {
+      return contacts.itens.filter((item) => item.favorite === value).length
+    } else if (criterion === 'all') {
       return contacts.itens.length
+    } else {
+      return contacts.itens.filter((item) => item.group === value).length
     }
   }
 
