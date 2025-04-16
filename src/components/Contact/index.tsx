@@ -70,8 +70,12 @@ const Contact = ({
     setIsEditing(false)
   }
 
-  function changeFavoriteContact() {
-    dispatch(changeFavorite({ id, favorited: true ? false : true }))
+  function toggleFavoriteContact() {
+    let f = favorite === 'Favorites' ? false : true
+
+    console.log(favorite, f)
+
+    dispatch(changeFavorite({ id, favorited: f }))
   }
 
   return (
@@ -84,7 +88,13 @@ const Contact = ({
             </em>
           ) : (
             <>
-              <S.Title>{name}</S.Title>
+              <S.Title
+                onClick={() => {
+                  toggleFavoriteContact()
+                }}
+              >
+                {name}
+              </S.Title>
             </>
           )}
           <S.Tag parameter="group" group={group}>
@@ -148,15 +158,6 @@ const Contact = ({
             <S.DeleteCancelButton onClick={cancelEdit}>
               Cancelar
             </S.DeleteCancelButton>
-            {favorite ? (
-              <SaveButton onClick={() => setFavorite(favorite)}>
-                Favorite
-              </SaveButton>
-            ) : (
-              <SaveButton onClick={changeFavoriteContact}>
-                Unfavorite
-              </SaveButton>
-            )}
           </>
         ) : (
           <>
@@ -164,15 +165,6 @@ const Contact = ({
             <S.DeleteCancelButton onClick={() => dispatch(deleteContact(id))}>
               Remover
             </S.DeleteCancelButton>
-            {favorite ? (
-              <SaveButton onClick={() => setFavorite(favorite)}>
-                Favorite
-              </SaveButton>
-            ) : (
-              <SaveButton onClick={changeFavoriteContact}>
-                Unfavorite
-              </SaveButton>
-            )}
           </>
         )}
       </S.ActionBar>
