@@ -22,7 +22,7 @@ const LeftAside = ({ showFilter }: Props) => {
 
   const handleLogout = () => {
     localStorage.removeItem('user')
-    navigate('/')
+    navigate('/login')
   }
 
   return (
@@ -74,17 +74,19 @@ const LeftAside = ({ showFilter }: Props) => {
               <SaveButton onClick={() => navigate('/register')}>
                 ADD NEW CONTACT
               </SaveButton>
-              <Button onClick={() => navigate('/login')}>DISCONECT</Button>
+              <Button onClick={() => handleLogout()}>DISCONECT</Button>
             </S.Filters>
           </>
         ) : (
-          <Button
-            onClick={() => {
-              handleLogout()
-            }}
-          >
-            Return to your contacts list
-          </Button>
+          <S.Filters>
+            <Button
+              onClick={() => {
+                navigate('/')
+              }}
+            >
+              Return to home
+            </Button>
+          </S.Filters>
         )}
       </div>
     </S.Aside>

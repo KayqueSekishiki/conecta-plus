@@ -20,7 +20,12 @@ export const MainContainer = styled.main`
   padding: 0 40px;
   height: 80vh;
   overflow-y: scroll;
+
+  h2 {
+    margin: 40px 0 24px 0;
+  }
 `
+
 export const Title = styled.h2`
   display: block;
   margin: 40px 0;
