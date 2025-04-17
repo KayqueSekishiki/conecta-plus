@@ -2,6 +2,7 @@
   "name": "conecta-plus",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/login",
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.1",
     "@testing-library/dom": "^10.4.0",
