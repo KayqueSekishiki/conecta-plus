@@ -4,7 +4,7 @@ import FilterCard from '../../components/FilterCard'
 import { RootReducer } from '../../store'
 
 import * as S from './styles'
-import { Button, Field, SaveButton } from '../../styles'
+import { Button, Field, SaveButton, Title } from '../../styles'
 import * as enums from '../../utils/enums/Contact'
 import { changeLetterSearch } from '../../store/reducers/filter'
 
@@ -17,6 +17,13 @@ const LeftAside = ({ showFilter }: Props) => {
   const navigate = useNavigate()
 
   const { letterSearch } = useSelector((state: RootReducer) => state.filter)
+
+  const user = localStorage.getItem('user')
+
+  const handleLogout = () => {
+    localStorage.removeItem('user')
+    navigate('/login')
+  }
 
   return (
     <S.Aside>
@@ -53,18 +60,33 @@ const LeftAside = ({ showFilter }: Props) => {
                 criterion="favorites"
                 cation="Favorites"
               />
-
               <FilterCard criterion="all" cation="All Contacts" />
+            </S.Filters>
+            <S.Filters>
+              <S.UserContainer>
+                <S.Icon
+                  src="https://www.svgrepo.com/show/327465/person-circle.svg"
+                  alt="User Icon"
+                />
+                <Title>{user}</Title>
+              </S.UserContainer>
+
               <SaveButton onClick={() => navigate('/register')}>
                 ADD NEW CONTACT
               </SaveButton>
-              <Button onClick={() => navigate('/login')}>DISCONECT</Button>
+              <Button onClick={() => handleLogout()}>DISCONECT</Button>
             </S.Filters>
           </>
         ) : (
-          <Button onClick={() => navigate('/')}>
-            Return to your contacts list
-          </Button>
+          <S.Filters>
+            <Button
+              onClick={() => {
+                navigate('/')
+              }}
+            >
+              Return to home
+            </Button>
+          </S.Filters>
         )}
       </div>
     </S.Aside>
