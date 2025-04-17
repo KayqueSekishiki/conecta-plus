@@ -84,7 +84,13 @@ const Contact = ({
         <S.Tags>
           {isEditing ? (
             <em>
-              <S.Title>Editing: {name}</S.Title>
+              <S.Title
+                onClick={() => {
+                  toggleFavoriteContact()
+                }}
+              >
+                Editing: {name}
+              </S.Title>
             </em>
           ) : (
             <>
@@ -120,7 +126,7 @@ const Contact = ({
           id="email"
           disabled={!isEditing}
           value={email}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
         />
       </div>
 
@@ -130,7 +136,7 @@ const Contact = ({
           id="phone"
           disabled={!isEditing}
           value={phone}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e) => setPhone(Number(e.target.value))}
         />
       </div>
 
