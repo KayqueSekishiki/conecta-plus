@@ -23,8 +23,18 @@ export const Filters = styled.div`
   margin-top: 16px;
 
   Button {
-    margin-top: 160px;
-    margin-bottom: -152px;
     height: 40px;
   }
+`
+
+export const UserContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+`
+
+export const Icon = styled.img`
+  width: 32px;
 `
