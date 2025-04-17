@@ -71,7 +71,7 @@ const Contact = ({
   }
 
   function toggleFavoriteContact() {
-    let f = favorite === 'Favorites' ? false : true
+    const f = favorite === 'Favorites' ? false : true
 
     console.log(favorite, f)
 

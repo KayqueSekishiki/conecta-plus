@@ -62,7 +62,12 @@ const LeftAside = ({ showFilter }: Props) => {
             </S.Filters>
           </>
         ) : (
-          <Button onClick={() => navigate('/')}>
+          <Button
+            onClick={() => {
+              localStorage.removeItem('user')
+              navigate('/')
+            }}
+          >
             Return to your contacts list
           </Button>
         )}
