@@ -15,7 +15,7 @@ const Initial = () => {
 
     localStorage.removeItem('user')
     localStorage.setItem('user', user)
-    navigate('/')
+    navigate('/main')
   }
 
   function handleChangeUser(e: React.FormEvent) {

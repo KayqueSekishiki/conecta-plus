@@ -19,7 +19,7 @@ const FormContainer = () => {
   const [group, setGroup] = useState(enums.Group.FRIENDS)
   const [favorite, setFavorite] = useState(enums.Favorite.UNFAVORITE)
 
-  const registerTarefa = (event: FormEvent<HTMLFormElement>) => {
+  const registerContact = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     dispatch(
@@ -32,13 +32,13 @@ const FormContainer = () => {
         favorite: enums.Favorite.UNFAVORITE
       })
     )
-    navigate('/')
+    navigate('/main')
   }
 
   return (
     <MainContainer>
       <Title>Add New Contact</Title>
-      <Form onSubmit={registerTarefa}>
+      <Form onSubmit={registerContact}>
         <div>
           <label htmlFor="name">Name</label>
           <Field

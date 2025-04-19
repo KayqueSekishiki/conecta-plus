@@ -10,11 +10,11 @@ import { GlobalStyle } from './styles'
 
 const routers = createBrowserRouter([
   {
-    path: '/login',
+    path: '/',
     element: <Initial />
   },
   {
-    path: '/',
+    path: '/main',
     element: <Main />
   },
   {

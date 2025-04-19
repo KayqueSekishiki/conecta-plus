@@ -22,7 +22,7 @@ const LeftAside = ({ showFilter }: Props) => {
 
   const handleLogout = () => {
     localStorage.removeItem('user')
-    navigate('/login')
+    navigate('/')
   }
 
   return (
@@ -81,7 +81,7 @@ const LeftAside = ({ showFilter }: Props) => {
           <S.Filters>
             <Button
               onClick={() => {
-                navigate('/')
+                navigate('/main')
               }}
             >
               Return to home
