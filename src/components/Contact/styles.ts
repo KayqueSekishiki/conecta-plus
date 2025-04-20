@@ -69,7 +69,7 @@ export const Tag = styled.span<TagProps>`
   border-radius: 8px;
 `
 
-export const Text = styled.textarea`
+export const Text = styled.input`
   color: #8b8b8b;
   font-size: 14px;
   line-height: 24px;

@@ -137,6 +137,7 @@ const Contact = ({
           disabled={!isEditing}
           value={phone}
           onChange={(e) => setPhone(Number(e.target.value))}
+          type="number"
         />
       </div>
 
